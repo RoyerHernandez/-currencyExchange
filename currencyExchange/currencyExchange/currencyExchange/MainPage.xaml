@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:currencyExchange"
+             x:Class="currencyExchange.MainPage">
+
+    <ScrollView>
+        <StackLayout Spacing="10">
+            <Label Text="Divisas"
+                            FontSize="30"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+            <Label Text="Ingrese el valor, seleccione moneda origen, seleccione moneda destino y de click en calcular"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+            <Entry x:Name="amountEntry"
+                        Placeholder="Ingrese el valor"
+                        Keyboard="Numeric"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+            <Label Text="Seleccione moneda origen"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+            <Picker x:Name="sourcePicker"
+                        Title="Seleccione moneda origen"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+            <Label Text="Seleccione moneda origen"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+            <Picker x:Name="targetPicker"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+            <Button x:Name="convertButton"
+                        Text="Convertir"
+                        IsEnabled="False"
+                        BackgroundColor="Green"
+                        TextColor="Blue"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+            <ActivityIndicator x:Name="waitActivityIndicator"
+                               IsRunning="False"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+            <Label x:Name="convertLabel"
+                        Text="No se han realizado conversiones"
+                        BackgroundColor="Blue"
+                        TextColor="WhiteSmoke"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
